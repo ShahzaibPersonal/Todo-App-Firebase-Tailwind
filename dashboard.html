@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.0.23/tailwind.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="js/firebase.js" defer></script>
+    <script src="js/app.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="76x76" href="res/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="res/favicon-16x16.png">
+    <link rel="manifest" href="res/site.webmanifest">
+    <link rel="mask-icon" href="res/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Todo Firebase App</title>
+</head>
+
+<body id="body" class="h-screen">
+
+    <header class="container mx-auto">
+        
+        <div class="text-center absolute" id="header">
+
+            <h1 id="title" class="text-4xl mt-3 text-emerald-400 hover:text-emerald-500">To Do Application</h1>
+            <h2 id="welcome" class="mt-2 text-xl">Hello </h2>
+           
+
+                <div id="list_container" class="" >
+
+                    <div id="list" class="p-3">
+
+                    </div>
+
+                </div>
+
+
+        </div>
+        
+        <button id="logoutBtn" type="submit"
+        class="border border-red-500 p-2 text-red-500  hover:bg-red-500 hover:text-neutral-50 rounded-lg  static mt-2 lg:fixed md:fixed right-10 top-5 ">Logout</button>
+
+    </header>
+
+    <main>
+        <div>
+
+
+            <div class="flex flex-col items-center justify-center h-screen ">
+
+                <div class="container">
+
+                    <div id="form"
+                        class="shadow-xl hidden border drop-shadow-2xl rounded-lg p-3 bg-neutral-50 sm:w-1/2 lg:w-1/2 md:w-1/2 ">
+
+                        <div class="p-2">
+                            <h1 class="text-center text-3xl">
+                                Add New Task
+                            </h1>
+                        </div>
+
+                        <div>
+
+                            <div class="flex flex-col shadow-xl p-2 rounded-lg my-2 p-5">
+                                <legend class="p-1 font-normal">Title </legend>
+                                <input type="text" id="title_task"
+                                    class="p-2 border drop-shadow-lg rounded-md font-normal  "
+                                    placeholder="Title of task" required>
+                            </div>
+                            <div class="flex flex-col shadow-xl p-2 rounded-lg my-2 p-5 ">
+                                <legend class="p-1 font-normal">Description </legend>
+                                <input type="text" id="desc_task"
+                                    class="p-2 border drop-shadow-lg rounded-md font-normal "
+                                    placeholder="Description of task" required>
+                            </div>
+
+
+                            <div class="">
+
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-4 shadow-xl p-2 rounded-lg my-2 p-5 col-auto">
+
+                                    <div class="">
+                                        <legend class="p-1 font-normal">Time Due</legend>
+                                        <input type="datetime-local" id="due_time"
+                                            class="p-2 border w-full drop-shadow-lg rounded-md font-normal" required>
+                                    </div>
+
+                                    <div class="">
+
+                                        <legend class="p-1 font-normal">Criticality Level </legend>
+
+                                        <select id="critical_level"
+                                            class="p-2 w-full border drop-shadow-lg rounded-md font-normal" required>
+                                            <option value="" selected disabled hidden>Choose criticality level here
+                                            </option>
+                                            <option value="low">Low</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="high">High</option>ss
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="flex flex-col">
+                                <button id="addTaskBtn" type="submit"
+                                    class="p-2 my-2 font-normal border-2 text-emerald-500  border-emerald-500 shadow-lg drop-shadow-xl hover:bg-emerald-500 rounded-lg  hover:text-neutral-50">Add
+                                    task</button>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="p-3 flex flex-col items-center justify-center z-40">
+
+                    <img id="add-btn" class="rounded-full shadow-lg drop-shadow-md bg-neutral-50 p-2 my-4 hover:drop-shadow-2xl"
+                        src="res/add.png" alt="">
+                    <h1 id="no_task" class="text-3xl font-light black-500 ">
+                        No Task Added
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+
+    <!-- <script type="modular" src="js/firebase.js"></script> -->
+
+</body>
+
+</html>

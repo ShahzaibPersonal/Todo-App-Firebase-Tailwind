@@ -1,0 +1,156 @@
+:root {
+    --add-color: #00AA74;
+    --close-color: #E85545;
+    --emerald-500: #10b981;
+    --emerald-600: #0e986a;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    transition: 250ms all;
+}
+
+.container_scroll {
+    max-height: 80vh;
+    overflow: auto;
+}
+
+
+#form {
+    position: relative;
+    animation-name: slide_up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#cover {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -20;
+}
+
+@keyframes slide_up {
+    0% {
+        /* transform:skewY(-50px); */
+        top: 150px;
+        opacity: 0.3;
+
+    }
+
+    100% {
+        /* transform:skewY(0px); */
+        top: 50px;
+        opacity: 1;
+
+    }
+}
+
+
+.add-icon {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* this is scroll bar  */
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--emerald-500);
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--emerald-600);
+}
+
+
+
+input[type=text]:focus {
+    outline-color: var(--emerald-500);
+}
+
+
+.add_click {
+    position: absolute;
+    z-index: 100;
+
+    animation-name: add_click;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes add_click {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+        top: 35%;
+        border: 3px solid #E85545;
+
+    }
+
+    100% {
+        transform: rotate(45deg);
+        top: 5%;
+        opacity: 1;
+        margin-top: 8px;
+    }
+}
+
+.close_click {
+
+    /* position: relative; */
+    animation-name: close_click;
+    animation-duration: 500ms;
+    animation-fill-mode: reverse;
+
+}
+
+@keyframes close_click {
+    0% {
+        /* background-color: #2ECC71; */
+        top: 10%;
+        border: 3px solid var(--emerald-500);
+        /* text-shadow: #2ECC71; */
+        transform: rotate(45deg);
+        margin-top: 8px;
+    }
+
+    100% {
+        /* background-color: #E74C3C; */
+
+        transform: rotate(0deg);
+        top: 35%;
+        margin-top: 0px;
+    }
+}

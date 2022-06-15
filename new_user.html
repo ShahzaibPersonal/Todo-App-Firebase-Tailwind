@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.0.23/tailwind.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="js/firebase.js" defer></script>
+    <script src="js/app.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="76x76" href="res/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="res/favicon-16x16.png">
+    <link rel="manifest" href="res/site.webmanifest">
+    <link rel="mask-icon" href="res/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="w-screen h-screen" id="body">
+
+    <img id="cover" src="res/bg.svg" alt="this is background image">
+
+    <div
+        class="max-w-sm md:max-w-3xl lg:max-w-4xl  shadow-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  drop-shadow-2xl bg-neutral-50 rounded-lg w-fit sm:w-full md:w-full lg:w-1/2 grid grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 ">
+        <!-- left -->
+        <div class="bg-gray-800  relative md:relative rounded ">
+
+         
+            <div class="p-3 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 absolute top-1/2 left-1/2 tranform -translate-x-1/2 -translate-y-1/2 ">
+                <img class="h-fit" src="res/signup.svg" alt="">
+                <h1 class="text-2xl text-center lg:text-2xl md:text-3xl sm:text-2xl  text-neutral-50 font-light ">
+                    Explore Possibilities</h1>
+         
+            </div>
+
+        </div>
+
+        <!-- right -->
+        <div class="relative">
+
+            <div class="text-center">
+                <h1 class="text-black-900 my-2 text-5xl text-center hover:text-emerald-500">Sign Up</h1>
+            </div>
+
+            <div class="px-3 py-4  ">
+                <div class="container drop-shadow-sm bg-neutral-200 flex flex-col py-3 px-2 rounded overflow-hidden">
+                    <div class="px-2 my-2">
+                        <legend class="py-2">First Name</legend>
+                        <input type="text" name="" id="newUserFirstName" placeholder="First Name"
+                            class=" w-full p-2 rounded shadow-md bg-netral-100 hover:shadow-emerald-500 font-normal">
+                    </div>
+                    <div class="px-2 my-2">
+                        <legend class="py-2">Last Name</legend>
+                        <input type="text" name="" id="newUserLastName" placeholder="Last Name"
+                            class="w-full p-2 rounded shadow-md bg-netral-100 hover:shadow-emerald-500 font-normal">
+                    </div>
+
+                    <div class="px-2 my-2">
+                        <legend class="py-2">Email</legend>
+                        <input type="text" name="" id="newUserEmail" placeholder="Email"
+                            class="w-full p-2 rounded shadow-md bg-netral-100 hover:shadow-emerald-500 font-normal">
+                    </div>
+                    <div class="px-2 my-2">
+                        <legend class="py-2">Password</legend>
+                        <input type="password" name="" id="newUserPassword" placeholder="Password"
+                            class="w-full p-2 rounded shadow-md bg-netral-100 hover:shadow-emerald-500 font-normal">
+                    </div>
+
+                    <div class=" px-2 my-2 ">
+                        <button id="signBtn" type="submit"
+                            class="text-center mx-auto w-full bg-emerald-500 hover:bg-emerald-400 rounded text-center text-neutral-50 py-2 ">Sign Up</button>
+                    </div>
+
+                    <div class="py-2">
+                        <p class=" text-center text-neutral-500 text-sm font-normal"> I already have an account <a
+                                href="index.html" class="font-normal hover:text-blue-600 hover:text-md ">Login with
+                                account</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
